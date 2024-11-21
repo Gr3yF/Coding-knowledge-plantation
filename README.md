@@ -3,24 +3,25 @@ This repo stores notes on coding languages and their intricacies, sort of like a
 
 Here's some notes on key points to consider addressing in a **README.md** for any repo:
 
--Need to be descriptive
--Anyone should understand our project
--List the contents of the repository
--Clearly explains the project to others
+-Need to be descriptive <br >
+-Anyone should understand our project <br >
+-List the contents of the repository <br >
+-Clearly explains the project to others <br >
 
-README fundamentals
--TitleDescription of technology
-Why?
--Description of the process
-Why?
--Table of contents
+README fundamentals <br >
+-Title <br >
+-Description of technology <br >
+Why? <br >
+-Description of the process <br >
+Why? <br >
+-Table of contents <br >
 
-README extras
--How the project came about
--The motivation
--Limitations
--Challenges
--What problem it hopes to solve
--What the intended use is
--Credits
+README extras <br >
+-How the project came about <br >
+-The motivation <br >
+-Limitations <br >
+-Challenges <br >
+-What problem it hopes to solve <br >
+-What the intended use is <br >
+-Credits <br >
 
