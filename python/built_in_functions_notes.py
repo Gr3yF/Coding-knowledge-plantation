@@ -1,6 +1,49 @@
+#METHODS
+
+# method=a function that is only available to a specific data type
+# syntax = variable.method()
+
+# --------------------------------------------------------------------
+
+#STRINGS
+
+#Create strings:
+# Can be created using single or double quotes
+#i.e.
+s_str = 'Hello, I am well.'
+d_str = "She's too cool for me."
+#double quotes must be used when you wish to include an apostrophe
+#otherwise you will have syntax issues with single quotes
+
+#methods:
+# .replace() - replace values in a str
+# replace Hello with Welcome
+s_str = s_str.replace('Hello', 'Welcome')
+print(s_str)
+
+# .lower() - convert to lowercase
+current_top_album = "For All The Dogs"
+current_top_album = current_top_album.lower()
+print(current_top_album)
+
+# .upper() - convert to uppercase
+current_top_album = current_top_album.upper()
+print(current_top_album)
+
+#Multi-line strings - use 3 double quotes to open & close
+#Create a string variable over multiple lines
+harry_potter = """Mr. and Mrs. Dursley,
+of number four Privet Drive,
+wer proud to say that they were perfectly normal,
+thank you very much."""
+
+
+# --------------------------------------------------------------------
+
 #LIST
 
-#create a list
+#list=store multiple values in a single variable
+#create a list:
 a_list = [1, 2, 3, 4, 5] #int list
 print(a_list)
 
@@ -10,40 +53,60 @@ s_list = ['sup', 'my', 'dude']
 bool_list = [True, True, False]
 print(f_list, '\n', s_list, '\n', bool_list)
 
-#methods
+#methods:
 
-#functions
+#functions:
+#type() to check the data type of a list
+print(type(s_list))
+print(type(bool_list))
+print(type(f_list))
+#always will return <class 'list'> regardless of dtype stored in the list
 
-#indexing
+#indexing:
+#lists are ordered, with each value receiving an index#
+#python counts values starting from zero for the first element
+#Subestting/Indexing Syntax = a_list[index#]
+print(s_list[0])
+print(f_list[2])
+print(bool_list[1])
+print(s_list[-1])
+#slicing for multiple values indexing
+#syntax = a_list[starting_index#:ending_index#]
+print(s_list[0:2])
+print(f_list[-2:]) #leaving it empty after or before the colon makes the slicing go to the end or from the start respectively
+#adding a step argument
+#syntax = a_list[starting_index#:ending_index#:step_value]
+print(s_list[::2]) #returns every 2nd value from the starting_index#
+#REMEMBER - slicing in python is exclusive when using index#
 
 # --------------------------------------------------------------------
 
 #DICTIONARIES
 #{key:value} pairs separated by a colon, all keys are unique and can only represent one value
 
-#Create an empty dictionary
-#method #1: empty curly brackets
+#Create an empty dictionary:
+#technique 1: empty curly brackets
 my_dict = {}
-# method #2: dict function
+# technique 2: dict function
 my_dict = dict()
 
-#Create a dictionary
+#Create a dictionary:
 ticker_symbols = {'AAPL':'Apple', 'F':'Ford', 'LUV':'Southwest'}
 print(ticker_symbols)
 #or
 ticker_symbols = dict([['APPL','Apple'],['F','Ford'],['LUV','Southwest']])
 print(ticker_symbols)
 
-#Adding to dictionaries
+#Adding to dictionaries:
 ticker_symbols['XON'] = 'Exxon'
 print(ticker_symbols)
 #update the value of an existing key
 ticker_symbols['XON'] = 'Exxon OLD'
 
-#Accessing values
-#method: indexing
+#Accessing values:
+#technique 1: indexing
 print(ticker_symbols['F'])
-#method: get attribute 
+#technique 2: .get() method/attribute 
 company = ticker_symbols.get('LUV')
 print(company)
 company = ticker_symbols.get('XOM') #if there is no Key that exists,'None' (or a 2nd arg. str defined by the user) is returned and no error is thrown like in typical indexing
@@ -51,8 +114,20 @@ print(company)
 company = ticker_symbols.get('XOM','MISSING')
 print(company)
 
-#Deleting or removing from a dictionary
-#Use del() function
+#methods:
+# .values() - Return all values from a dictionary
+print(ticker_symbols.values())
+
+# .keys() - Return all keys from a dictionary
+print(ticker_symbols.keys())
+
+# .items() - Return a list of all key, value pairs
+# outputs each pair in parentheses known as a tuple
+print(ticker_symbols.items())
+
+#functions:
+# del() function
+# Deleting or removing from a dictionary
 del(ticker_symbols['XON'])
 print(ticker_symbols) 
 
