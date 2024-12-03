@@ -66,6 +66,3 @@ from datetime import timedelta #can add this to the top import like this 'from d
 offset = timedelta(weeks=1)
 week_earlier_dt = n_dt - offset
 print(n_dt, '\n', week_earlier_dt,'\n', type(week_earlier_dt))
-
-query_date = datetime()
-query_date = datetime(query_date.year - 1, 1,1)
